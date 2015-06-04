@@ -8,14 +8,17 @@ public class Player : MonoBehaviour {
 	
 	[SerializeField]
 	private GameObject ripplePrefab;
-	private GameObject ripple;
-	
-	private float effectTendency = 0.15f;
+	private Ripple_particle rippleR;
+	private Ripple_particle rippleL;
+
+	private float effectTendency = 0.5f;
 	private float timer = 0;
-	
+
 	private CharacterController controller;
 	private FPSInputController inputController;
-	//private RippleGenerator ripple;
+
+	private Vector3 offset = new Vector3(1.5f, 0.0f, 0.0f);
+	private bool effectOnRight = true;
 
 	void Awake(){
 		controller = GetComponent<CharacterController>();
@@ -24,11 +27,15 @@ public class Player : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	//	ripple = GetComponent<RippleGenerator>();
-		ripple = Instantiate(ripplePrefab, this.transform.position, this.transform.rotation) as GameObject;
-		//Vector3 pos = ripple.transform.position;
-		//ripple.transform.position = new Vector3(pos.x, 0.01f, pos.z);
-		//ripple.transform.SetParent(this.transform);
+
+		rippleR = Instantiate(ripplePrefab).GetComponent<Ripple_particle>();
+		rippleR.transform.SetParent(this.transform);
+		rippleR.transform.localPosition = new Vector3( offset.x, 0.00f, offset.z);
+
+		rippleL = Instantiate(ripplePrefab).GetComponent<Ripple_particle>();
+		rippleL.transform.SetParent(this.transform);
+		rippleL.transform.localPosition = new Vector3( -offset.x, 0.00f, offset.z);
+
 	}
 	
 	// Update is called once per frame
@@ -37,31 +44,37 @@ public class Player : MonoBehaviour {
 		if(inputController.isStop){
 			return;
 		}
-		UpdateEffectPos();
-		
-		//ripple.enabled = controller.isGrounded;
-		
-		
+
+		rippleR.gameObject.SetActive(controller.isGrounded);
+		rippleL.gameObject.SetActive(controller.isGrounded);
+
 		if(timer > effectTendency){
+			Debug.Log("Create");
 			timer = 0;
-			if(Random.Range(0, 3) == 0){
-		//		MakeEffect();
+			//	UpdateEffectPos();
+			if(effectOnRight){
+				rippleR.Create();
+			}else{
+				rippleL.Create();
 			}
+			effectOnRight = !effectOnRight;
+
 		}else{
 			timer += Time.deltaTime;
 		}
 	
 	}
-	
-	
+		
 	private void UpdateEffectPos(){
-	/*
-		RaycastHit[] raycastHits = Physics.RaycastAll(this.transform.position, Vector3.down, 2.1f);
-		if(raycastHits.Length >= 1){
-			return;
-		}
-	*/
-		Vector3 pos = this.transform.position;
-		ripple.transform.position = new Vector3(pos.x, 0.01f, pos.z);
+
+	//	ripple.transform.SetParent(this.transform);
+
+	//	Vector3 myPos = this.transform.position;
+	//	Vector3 newPos = new Vector3(myPos.x + (offset.x * (effectOnRight ? 1 : -1) ), 0.01f, myPos.z + offset.z);
+		Vector3 newPos = new Vector3( (offset.x * (effectOnRight ? 1 : -1) ), 0.00f, offset.z);
+		//Vector3 newPos = Vector3.zero;
+
+	//	ripple.transform.localPosition = newPos;
+	//	effectOnRight = !effectOnRight;
 	}
 }

@@ -4,18 +4,29 @@ using System.Collections;
 public class Ripple_particle : MonoBehaviour {
 
 	[SerializeField]
-	private Material myMaterial;
+	private int textureIndex = 0;
 
-	//private ParticleRenderer particleRenderer;
-	
+
+	[SerializeField]
+	private Texture[] myTextures;
+
+	private ParticleSystemRenderer par;
+	private ParticleSystem parSys;
+
 	// Use this for initialization
 	void Awake () {
-	//	particleRenderer = GetComponent<ParticleRenderer>();
-		
+		par = GetComponent<ParticleSystemRenderer>();
+		parSys = GetComponent<ParticleSystem>();
+		parSys.playOnAwake = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	//	particleRenderer.material = myMaterial;
+		par.material.mainTexture = myTextures[textureIndex % myTextures.Length];
+	}
+
+	public void Create(){
+		Debug.Log("Create");
+		parSys.Play();
 	}
 }
