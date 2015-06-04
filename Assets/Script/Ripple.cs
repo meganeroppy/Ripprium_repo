@@ -4,7 +4,7 @@ using System.Collections;
 public class Ripple : MonoBehaviour {
 
 	[SerializeField]
-	private float duration = 2.5f;
+	private float lifeTime = 2.5f;
 	private Vector3 myScale;
 	private float timer = 0;
 	[SerializeField]
@@ -12,7 +12,7 @@ public class Ripple : MonoBehaviour {
 	private Color[] colors =  new Color[8]{Color.red, Color.blue, Color.magenta, Color.white, Color.magenta, Color.yellow, Color.green, Color.cyan};
 	private SpriteRenderer spriteRenderer;
 	[SerializeField]
-	private float gainRate = 1.01f;
+	private float gainRate = 1.5f;
 
 
 	void Awake(){
@@ -30,17 +30,20 @@ public class Ripple : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
-	
-	
-		if(myScale.x > maxScale || timer > duration){
+		if(myScale.x > maxScale || timer > lifeTime){
 			Destroy(this.gameObject);
 		}else{
-			
-		
 			timer += Time.deltaTime;
 			myScale *= gainRate;
 			this.transform.localScale = myScale;
 			
+			SetAlpha((lifeTime - timer) / lifeTime);
 		}
+	}
+	
+	public void SetAlpha(float alpha){
+		Color32 col = spriteRenderer.color;
+		Color32 newColor = new Color(col.r, col.g, col.b, alpha);
+		spriteRenderer.color = newColor;
 	}
 }

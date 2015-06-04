@@ -15,6 +15,7 @@ public class Player : MonoBehaviour {
 	
 	private CharacterController controller;
 	private FPSInputController inputController;
+	//private RippleGenerator ripple;
 
 	void Awake(){
 		controller = GetComponent<CharacterController>();
@@ -23,6 +24,7 @@ public class Player : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+	//	ripple = GetComponent<RippleGenerator>();
 		ripple = Instantiate(ripplePrefab, this.transform.position, this.transform.rotation) as GameObject;
 		//Vector3 pos = ripple.transform.position;
 		//ripple.transform.position = new Vector3(pos.x, 0.01f, pos.z);
@@ -37,7 +39,7 @@ public class Player : MonoBehaviour {
 		}
 		UpdateEffectPos();
 		
-		ripple.SetActive(controller.isGrounded);
+		//ripple.enabled = controller.isGrounded;
 		
 		
 		if(timer > effectTendency){
