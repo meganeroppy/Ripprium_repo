@@ -15,14 +15,14 @@ public class Player : MonoBehaviour {
 	private float timer = 0;
 
 	private CharacterController controller;
-	private FPSInputController inputController;
+	//private FPSInputController inputController;
 
 	private Vector3 offset = new Vector3(1.5f, 0.0f, 0.0f);
 	private bool effectOnRight = true;
 
 	void Awake(){
 		controller = GetComponent<CharacterController>();
-		inputController = GetComponent<FPSInputController>();
+		//inputController = GetComponent<FPSInputController>();
 	}
 
 	// Use this for initialization
@@ -40,11 +40,11 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+	/*
 		if(inputController.isStop){
 			return;
 		}
-
+*/
 		rippleR.gameObject.SetActive(controller.isGrounded);
 		rippleL.gameObject.SetActive(controller.isGrounded);
 

@@ -3,8 +3,10 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour
 {
-    const float Speed = 10f;
-    const float RotSpeed = 180f;
+	[SerializeField]
+    float Speed = 10f;
+    [SerializeField]
+    float RotSpeed = 180f;
 
     void Update()
     {
