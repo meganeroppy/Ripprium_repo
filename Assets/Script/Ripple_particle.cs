@@ -26,7 +26,7 @@ public class Ripple_particle : MonoBehaviour {
 	}
 
 	public void Create(){
-		Debug.Log("Create");
+//		Debug.Log("Create");
 		parSys.Play();
 	}
 }

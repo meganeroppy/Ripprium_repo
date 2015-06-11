@@ -4,9 +4,9 @@ using System.Collections.Generic;
 
 public class Boid : MonoBehaviour
 {
-    GameObject boss;
-    GameObject enemy;
-    public static List<Boid> children = new List<Boid>();
+    Boss boss;
+    Enemy enemy;
+    //public static List<Boid> children = new List<Boid>();
     const float TurnSpeed = 0.05f;
 
     const float SeparationWeight = 5f;
@@ -17,11 +17,12 @@ public class Boid : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        boss = GameObject.Find("Boss");
-        enemy = GameObject.FindWithTag("Enemy");
+        boss = transform.parent.transform.GetChild(0).GetComponent<Boss>();
+		enemy = transform.parent.transform.GetChild(1).GetComponent<Enemy>();
 
         // 参照可能なリストへ自身を追加
-        children.Add(this);
+     //   children.Add(this);
+		boss.AddToBoid(this);
 
         // 初期の移動方向をランダムで決める
         GetComponent<Rigidbody>().velocity = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
@@ -58,7 +59,7 @@ public class Boid : MonoBehaviour
     {
         Vector3 change = Vector3.zero;
         int count = 0;
-        foreach (Boid child in children)
+        foreach (Boid child in boss.getBoid())
         {
             // 自分自身は計算しない
             if (child.Equals(this))
@@ -93,12 +94,12 @@ public class Boid : MonoBehaviour
     {
         // 群れの中心を求める
         Vector3 center = Vector3.zero;
-        foreach (Boid child in children)
+		foreach (Boid child in boss.getBoid())
         {
             center += child.transform.position;
         }
 
-        center /= children.Count;
+        center /= boss.getBoid().Count;
         center += boss.transform.position;
         center /= 2f;
 			
@@ -112,7 +113,7 @@ public class Boid : MonoBehaviour
     {
         Vector3 change = Vector3.zero;
         int count = 0;
-        foreach (Boid child in children)
+		foreach (Boid child in boss.getBoid())
         {
             // 自分自身は計算しない
             if (child.Equals(this))

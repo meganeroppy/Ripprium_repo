@@ -13,7 +13,7 @@ public class CameraControl : MonoBehaviour
 	
     // Update is called once per frame
     void Update()
-    {
+    {/*
         // 群れの中心を求める
         Vector3 center = Vector3.zero;
         foreach (Boid child in Boid.children)
@@ -25,5 +25,6 @@ public class CameraControl : MonoBehaviour
 
         transform.position = center + pos;
         transform.LookAt(center);
+        */
     }
 }

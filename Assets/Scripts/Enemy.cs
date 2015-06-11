@@ -8,16 +8,22 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     float RotSpeed = 180f;
 
+	Boss boss;
+
+	void Awake(){
+		boss = transform.parent.transform.GetChild(0).GetComponent<Boss>();
+	}
+
     void Update()
     {
         // 群れの中心を求める
         Vector3 center = Vector3.zero;
-        foreach (Boid child in Boid.children)
+		foreach (Boid child in boss.getBoid())
         {
             center += child.transform.position;
         }
         
-        center /= Boid.children.Count;
+		center /= boss.getBoid().Count;
 
         // ターゲットまでの角度を取得
         Vector3 vecTarget = center - transform.position;
