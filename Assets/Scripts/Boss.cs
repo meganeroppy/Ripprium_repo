@@ -22,7 +22,7 @@ public class Boss : MonoBehaviour
 		this.children.Add(child);
 	}
 
-	public List<Boid getBoid(){
+	public List<Boid> getBoid(){
 		return this.children;
 	}
 }

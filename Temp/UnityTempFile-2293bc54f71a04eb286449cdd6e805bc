@@ -1,0 +1,150 @@
+-debug
+-target:library
+-nowarn:0169
+-out:'Temp/Assembly-CSharp.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll'
+-r:'Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll'
+-r:'Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll'
+-define:UNITY_5_0_2
+-define:UNITY_5_0
+-define:UNITY_5
+-define:ENABLE_LICENSE_RENAME
+-define:ENABLE_NEW_BUGREPORTER
+-define:ENABLE_2D_PHYSICS
+-define:ENABLE_4_6_FEATURES
+-define:ENABLE_AUDIO
+-define:ENABLE_CACHING
+-define:ENABLE_CLOTH
+-define:ENABLE_DUCK_TYPING
+-define:ENABLE_FRAME_DEBUGGER
+-define:ENABLE_GENERICS
+-define:ENABLE_HOME_SCREEN
+-define:ENABLE_IMAGEEFFECTS
+-define:ENABLE_LIGHT_PROBES_LEGACY
+-define:ENABLE_MICROPHONE
+-define:ENABLE_MULTIPLE_DISPLAYS
+-define:ENABLE_NEW_HIERARCHY
+-define:ENABLE_PHYSICS
+-define:ENABLE_PHYSICS_PHYSX3
+-define:ENABLE_PLUGIN_INSPECTOR
+-define:ENABLE_SHADOWS
+-define:ENABLE_SINGLE_INSTANCE_BUILD_SETTING
+-define:ENABLE_SPRITES
+-define:ENABLE_TERRAIN
+-define:ENABLE_UNITYEVENTS
+-define:ENABLE_WEBCAM
+-define:ENABLE_WWW
+-define:ENABLE_AUDIOMIXER_SUSPEND
+-define:ENABLE_NONPRO
+-define:INCLUDE_DYNAMIC_GI
+-define:INCLUDE_GI
+-define:INCLUDE_IL2CPP
+-define:PLATFORM_SUPPORTS_MONO
+-define:RENDER_SOFTWARE_CURSOR
+-define:UNITY_STANDALONE_WIN
+-define:UNITY_STANDALONE
+-define:ENABLE_SUBSTANCE
+-define:ENABLE_TEXTUREID_MAP
+-define:ENABLE_RUNTIME_GI
+-define:ENABLE_MOVIES
+-define:ENABLE_NETWORK
+-define:ENABLE_MONO
+-define:ENABLE_PROFILER
+-define:UNITY_EDITOR
+-define:UNITY_EDITOR_64
+-define:UNITY_EDITOR_OSX
+'Assets/Destroyed_city_FREE/Standard Assets/Character Controllers/Sources/Scripts/MouseLook.cs'
+'Assets/Destroyed_city_FREE/Standard Assets/Water (Pro Only)/Sources/Scripts/Water.cs'
+'Assets/Realistic Water Pack/Minimalistic Water/Script/RealisticWater.cs'
+'Assets/Realistic Water Pack/Minimalistic Water/Water Bottom - Dinamic/Script/RealisticWater_Bottom.cs'
+'Assets/Realistic Water Pack/Procedure Water/Scripts/TI_Waves.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/Antialiasing.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/Bloom.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/BloomAndFlares.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/BloomOptimized.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/Blur.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/BlurOptimized.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/CameraMotionBlur.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/ColorCorrectionCurves.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/ColorCorrectionLookup.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/ColorCorrectionRamp.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/ContrastEnhance.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/ContrastStretch.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/CreaseShading.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/DepthOfField.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/DepthOfFieldDeprecated.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/EdgeDetection.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/Fisheye.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/GlobalFog.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/Grayscale.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/ImageEffectBase.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/ImageEffects.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/MotionBlur.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/NoiseAndGrain.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/NoiseAndScratches.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/PostEffectsBase.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/PostEffectsHelper.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/Quads.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/ScreenOverlay.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/ScreenSpaceAmbientObscurance.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/ScreenSpaceAmbientOcclusion.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/SepiaTone.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/SunShafts.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/TiltShift.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/Tonemapping.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/Triangles.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/Twirl.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/VignetteAndChromaticAberration.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Effects/ImageEffects/Scripts/Vortex.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/Antialiasing.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/Bloom.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/BloomAndFlares.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/BloomOptimized.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/Blur.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/BlurOptimized.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/CameraMotionBlur.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/ColorCorrectionCurves.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/ColorCorrectionLookup.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/ColorCorrectionRamp.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/ContrastEnhance.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/ContrastStretch.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/CreaseShading.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/DepthOfField.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/DepthOfFieldDeprecated.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/EdgeDetection.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/Fisheye.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/GlobalFog.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/Grayscale.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/ImageEffectBase.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/ImageEffects.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/MotionBlur.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/NoiseAndGrain.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/NoiseAndScratches.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/PostEffectsBase.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/PostEffectsHelper.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/Quads.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/ScreenOverlay.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/ScreenSpaceAmbientObscurance.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/ScreenSpaceAmbientOcclusion.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/SepiaTone.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/SunShafts.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/TiltShift.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/Tonemapping.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/Triangles.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/Twirl.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/VignetteAndChromaticAberration.cs'
+'Assets/SFB_Dungeon/SFB_Dungeon_Barrels/Standard Assets/Image Effects (Pro Only)/Vortex.cs'
+'Assets/Script/Player.cs'
+'Assets/Script/Ripple.cs'
+'Assets/Script/RippleGenerator.cs'
+'Assets/Script/Ripple_particle.cs'
+'Assets/Scripts/Boid.cs'
+'Assets/Scripts/Boss.cs'
+'Assets/Scripts/CameraControl.cs'
+'Assets/Scripts/Enemy.cs'
+'Assets/Text3d.cs'
+-r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Xml.Linq.dll'
