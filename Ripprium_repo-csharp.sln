@@ -5,6 +5,8 @@ Project("{01722BC8-2992-520B-BB05-DA7EB3EDA00B}") = "Ripprium_repo", "Assembly-C
 EndProject
 Project("{01722BC8-2992-520B-BB05-DA7EB3EDA00B}") = "Ripprium_repo", "Assembly-CSharp-vs.csproj", "{6FC739B5-6119-D172-EF6D-C9C037BC8DA1}"
 EndProject
+Project("{01722BC8-2992-520B-BB05-DA7EB3EDA00B}") = "Ripprium_repo", "Assembly-CSharp-Editor-vs.csproj", "{644EDBFA-4C87-63DF-151A-6AA0451D9DF0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,11 +21,15 @@ Global
 		{6FC739B5-6119-D172-EF6D-C9C037BC8DA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FC739B5-6119-D172-EF6D-C9C037BC8DA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FC739B5-6119-D172-EF6D-C9C037BC8DA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{644EDBFA-4C87-63DF-151A-6AA0451D9DF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{644EDBFA-4C87-63DF-151A-6AA0451D9DF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{644EDBFA-4C87-63DF-151A-6AA0451D9DF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{644EDBFA-4C87-63DF-151A-6AA0451D9DF0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																										GlobalSection(MonoDevelopProperties) = preSolution
+																																				GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

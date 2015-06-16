@@ -49,7 +49,7 @@ public class Player : MonoBehaviour {
 		rippleL.gameObject.SetActive(controller.isGrounded);
 
 		if(timer > effectTendency){
-			Debug.Log("Create");
+//			Debug.Log("Create");
 			timer = 0;
 			//	UpdateEffectPos();
 			if(effectOnRight){

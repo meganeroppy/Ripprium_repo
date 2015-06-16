@@ -1,20 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Ripple.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Text3d.cs">
     <Files>
-      <File FileName="Assets/Script/Ripple.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/Player.cs" Line="9" Column="18" />
+      <File FileName="Assets/Script/Text3d.cs" Line="28" Column="15" />
+      <File FileName="Assets/Scripts/Boss.cs" Line="17" Column="80" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="Assembly-CSharp" expanded="True">
-            <Node name="Script" expanded="True">
-              <Node name="Ripple.cs" selected="True" />
-            </Node>
-            <Node name="Scripts" expanded="True" />
-          </Node>
-        </State>
+        <State expanded="True" selected="True" />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
