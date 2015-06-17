@@ -48,7 +48,6 @@
   <ItemGroup>
      <Compile Include="Assets\Destroyed_city_FREE\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
      <Compile Include="Assets\Destroyed_city_FREE\Standard Assets\Water (Pro Only)\Sources\Scripts\Water.cs" />
-     <Compile Include="Assets\LightCamera.cs" />
      <Compile Include="Assets\Realistic Water Pack\Minimalistic Water\Script\RealisticWater.cs" />
      <Compile Include="Assets\Realistic Water Pack\Minimalistic Water\Water Bottom - Dinamic\Script\RealisticWater_Bottom.cs" />
      <Compile Include="Assets\Realistic Water Pack\Procedure Water\Scripts\TI_Waves.cs" />
@@ -61,6 +60,7 @@
      <Compile Include="Assets\Scripts\Boss.cs" />
      <Compile Include="Assets\Scripts\CameraControl.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
+     <Compile Include="Assets\Scripts\LightCamera.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
