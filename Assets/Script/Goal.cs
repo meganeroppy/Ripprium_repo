@@ -4,7 +4,8 @@ using System.Collections;
 public class Goal : MonoBehaviour {
 
 	private ArrayList checkPoints = new ArrayList();
-	private bool clearFlug = false;
+	public static bool clearFlug = false;
+	public static bool completed = false;
 	[SerializeField]
 	private GameObject effect;
 	
@@ -17,18 +18,19 @@ public class Goal : MonoBehaviour {
 			return;
 		}
 		
-		
+
 		for(int i = 0 ; i < checkPoints.Count ; i++){
 			CheckPoint obj = (checkPoints[i] as GameObject).GetComponent<CheckPoint>();
 			if(!obj.isChecked){
 				return;
 			}	
 		}
-		
+
 		if(!clearFlug){
 			Debug.Log("ClearFlug");
 			clearFlug = true;
-			Instantiate(effect, this.transform.position, Quaternion.identity);
+			GameObject obj = Instantiate(effect);
+			obj.transform.SetParent(GameObject.Find("Bed").transform);
 		}
 	
 	}
@@ -47,6 +49,19 @@ public class Goal : MonoBehaviour {
 			}
 		}
 		return objs;
+	}
+
+	private void OnTriggerEnter(Collider col){
+		if(!clearFlug){
+			return;
+		}
+
+		if(col.tag == "Player"){
+			if(!completed ){
+				completed = true;
+				Debug.Log("Game Clear");
+			}
+		}
 	}
 	
 }

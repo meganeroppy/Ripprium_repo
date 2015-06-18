@@ -40,6 +40,16 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		if(Goal.completed){
+			if(controller.enabled == true){
+				controller.enabled = false;
+			}
+
+			if(GetComponent<CharacterMotor>().enabled == true){
+				GetComponent<CharacterMotor>().enabled = false;
+			}
+		}
 	/*
 		if(inputController.isStop){
 			return;
