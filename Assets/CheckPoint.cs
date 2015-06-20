@@ -20,6 +20,10 @@ public class CheckPoint : MonoBehaviour {
 				obj.transform.SetParent(this.transform);
 
 				Debug.Log(this.gameObject.name + " has been checked");
+				
+				if(this.transform.childCount > 0){
+					Destroy(this.transform.GetChild(0).gameObject);
+				}
 			}
 		}
 	}

@@ -9,6 +9,8 @@ Project("{01722BC8-2992-520B-BB05-DA7EB3EDA00B}") = "Ripprium_repo", "Assembly-C
 EndProject
 Project("{01722BC8-2992-520B-BB05-DA7EB3EDA00B}") = "Ripprium_repo", "Assembly-UnityScript-firstpass.unityproj", "{EB22CFE2-F889-C070-D434-A6029884FF81}"
 EndProject
+Project("{01722BC8-2992-520B-BB05-DA7EB3EDA00B}") = "Ripprium_repo", "Assembly-UnityScript.unityproj", "{21EAF0D4-EC0F-658F-2FE6-27A5D8F60751}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,11 +33,15 @@ Global
 		{EB22CFE2-F889-C070-D434-A6029884FF81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB22CFE2-F889-C070-D434-A6029884FF81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB22CFE2-F889-C070-D434-A6029884FF81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21EAF0D4-EC0F-658F-2FE6-27A5D8F60751}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21EAF0D4-EC0F-658F-2FE6-27A5D8F60751}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21EAF0D4-EC0F-658F-2FE6-27A5D8F60751}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21EAF0D4-EC0F-658F-2FE6-27A5D8F60751}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																																															GlobalSection(MonoDevelopProperties) = preSolution
+																																																																						GlobalSection(MonoDevelopProperties) = preSolution
 =======
 																																										GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> origin/dev
