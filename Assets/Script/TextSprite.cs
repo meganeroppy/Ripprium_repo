@@ -24,7 +24,7 @@ public class TextSprite : MonoBehaviour {
 		float dot = Vector3.Dot(transform.forward, diff);
 		
 		
-		if(dot < 0 && this.gameObject.name != "Text5"){
+		if(dot < 0 && ( this.gameObject.name != "Text5" || !this.gameObject.name.Contains("Marker"))){
 			UpdateAlpha(0);
 			return;
 		}                       

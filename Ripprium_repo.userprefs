@@ -1,12 +1,16 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/CheckPoint.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/CheckPoint.cs">
     <Files>
-      <File FileName="Assets/CheckPoint.cs" Line="25" Column="51" />
+      <File FileName="Assets/Script/CheckPoint.cs" Line="31" Column="13" />
+      <File FileName="Assets/Script/Text3d.cs" Line="28" Column="55" />
+      <File FileName="Assets/Script/TextSprite.cs" Line="27" Column="55" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/MeganeRoppy/Ripprium_repo/Assets/MysteryZone.cs" line="39" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
