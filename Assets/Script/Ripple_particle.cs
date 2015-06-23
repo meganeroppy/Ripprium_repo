@@ -25,8 +25,11 @@ public class Ripple_particle : MonoBehaviour {
 		par.material.mainTexture = myTextures[textureIndex % myTextures.Length];
 	}
 
-	public void Create(){
-//		Debug.Log("Create");
+	public void Create(bool withDestroy=false){
+		Debug.Log("Create");
 		parSys.Play();
+		if(withDestroy){
+			Destroy(this.gameObject, 1.0f);
+		}
 	}
 }

@@ -10,6 +10,8 @@ public class Player : MonoBehaviour {
 	private GameObject ripplePrefab;
 	private Ripple_particle rippleR;
 	private Ripple_particle rippleL;
+	[SerializeField]
+	private RunningRipple runningRipple;
 
 	private float effectTendency = 0.5f;
 	private float timer = 0;
@@ -50,11 +52,13 @@ public class Player : MonoBehaviour {
 				GetComponent<CharacterMotor>().enabled = false;
 			}
 		}
+		
 	/*
 		if(inputController.isStop){
 			return;
 		}
 */
+
 		rippleR.gameObject.SetActive(controller.isGrounded);
 		rippleL.gameObject.SetActive(controller.isGrounded);
 
@@ -72,7 +76,6 @@ public class Player : MonoBehaviour {
 		}else{
 			timer += Time.deltaTime;
 		}
-	
 	}
 		
 	private void UpdateEffectPos(){
@@ -81,10 +84,15 @@ public class Player : MonoBehaviour {
 
 	//	Vector3 myPos = this.transform.position;
 	//	Vector3 newPos = new Vector3(myPos.x + (offset.x * (effectOnRight ? 1 : -1) ), 0.01f, myPos.z + offset.z);
-		Vector3 newPos = new Vector3( (offset.x * (effectOnRight ? 1 : -1) ), 0.00f, offset.z);
+		Vector3 newPos = new Vector3( (offset.x * (effectOnRight ? 1 : -1) ), 0.05f, offset.z);
 		//Vector3 newPos = Vector3.zero;
 
 	//	ripple.transform.localPosition = newPos;
 	//	effectOnRight = !effectOnRight;
+	}
+	
+	public void CreateRunningRipple(){
+	Vector3 pos = this.transform.position;
+		Instantiate( runningRipple , new Vector3(pos.x, 0, pos.z), this.transform.rotation);
 	}
 }

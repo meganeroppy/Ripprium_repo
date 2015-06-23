@@ -72,6 +72,7 @@
      <Compile Include="Assets\Realistic Water Pack\Minimalistic Water\Water Bottom - Dinamic\Script\RealisticWater_Bottom.cs" />
      <Compile Include="Assets\Realistic Water Pack\Procedure Water\Scripts\TI_Waves.cs" />
      <Compile Include="Assets\RunningRipple.cs" />
+     <Compile Include="Assets\RunningRipplePoint.cs" />
      <Compile Include="Assets\Script\BillboardingText.cs" />
      <Compile Include="Assets\Script\Boid\Boid.cs" />
      <Compile Include="Assets\Script\Boid\Boss.cs" />
