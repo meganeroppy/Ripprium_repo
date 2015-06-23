@@ -14,16 +14,22 @@ public class MysteryZone : MonoBehaviour {
 	
 	private MeshRenderer bridgeMesh;
 	
+	private bool touched = false;
+	
+	private Bridge bridge;
+	
 	
 	private void Awake(){
-		GameObject bridge = GameObject.Find("Old_Bridge").gameObject;
-		bridgeMesh = bridge.GetComponent<MeshRenderer>();
+		bridge = GameObject.Find("Old_Bridge").GetComponent<Bridge>();
+		bridgeMesh = bridge.gameObject.GetComponent<MeshRenderer>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
 		pickedUp = flugObject == null;
+		
+		this.displayItems = bridge.inRange;
 	
 		for(int i = 0 ; i < this.transform.childCount ; i++){
 			this.transform.GetChild(i).gameObject.SetActive(displayItems && !pickedUp);
@@ -31,13 +37,5 @@ public class MysteryZone : MonoBehaviour {
 		
 		bridgeMesh.material = displayItems && !pickedUp ? bridgeMaterials[1] : bridgeMaterials[0];
 		
-	}
-	
-	private void OnTriggerEnter(Collider col){
-		if(col.tag == "Player"){
-			if(!displayItems ){
-				this.displayItems = true;
-			}
-		}
 	}
 }

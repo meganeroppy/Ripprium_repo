@@ -18,6 +18,9 @@ public class CheckPoint : MonoBehaviour {
 	
 	[SerializeField]
 	private Transform marker;
+	
+	[SerializeField]
+	Transform target;
 	// Use this for initialization
 	void Awake () {
 		this.isChecked = false;
@@ -30,11 +33,13 @@ public class CheckPoint : MonoBehaviour {
 				
 				// check
 				GameObject obj = Instantiate(check, marker.position + new Vector3(0,5,0), marker.rotation) as GameObject;
-				obj.transform.SetParent(marker);
+				//obj.transform.SetParent(marker);
 				Debug.Log(this.gameObject.name + " has been checked");
 				
 				// effect
-				//obj = Instantiate(effect, this.transform.position + new Vector3(0,5,0), Quaternion.identity) as GameObject;
+				obj = Instantiate(effect) as GameObject;
+				obj.transform.position = new Vector3 (target.position.x, 0, target.position.z);
+				//objtransform.SetParent(target);
 				
 				PlaySE();
 				

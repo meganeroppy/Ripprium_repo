@@ -9,6 +9,10 @@ public class Goal : MonoBehaviour {
 	[SerializeField]
 	private GameObject effect;
 	
+	[SerializeField]
+	private AudioClip se_clearFlug;
+	
+	
 	private void Start(){
 		checkPoints = GetCheckPoints();
 	}
@@ -18,7 +22,6 @@ public class Goal : MonoBehaviour {
 			return;
 		}
 		
-
 		for(int i = 0 ; i < checkPoints.Count ; i++){
 			CheckPoint obj = (checkPoints[i] as GameObject).GetComponent<CheckPoint>();
 			if(!obj.isChecked){
@@ -31,6 +34,9 @@ public class Goal : MonoBehaviour {
 			clearFlug = true;
 			GameObject obj = Instantiate(effect);
 			obj.transform.SetParent(GameObject.Find("Bed").transform);
+			
+			this.GetComponent<AudioSource>().PlayOneShot(se_clearFlug);
+			
 		}
 	
 	}

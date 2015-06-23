@@ -18,7 +18,6 @@ public class TextSprite : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-
 		
 		Vector3 diff = new Vector3(this.transform.position.x - player.transform.position.x, 0, this.transform.position.z - player.transform.position.z);
 		float dot = Vector3.Dot(transform.forward, diff);
