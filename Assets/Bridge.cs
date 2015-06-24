@@ -20,9 +20,14 @@ public class Bridge : MonoBehaviour {
 	private MeshRenderer mesh;
 	
 	private bool touched = false;
+	
+	private Color defaultFogColor = new Color(0.302f, 0.753f, 0.978f, 0.203f);
+	private Color darkenFogColor = new Color(0.493f, 0.004f, 0.372f, 0.203f);
 		
 	private void Awake(){
 		mesh = GetComponent<MeshRenderer>();
+	//	defaultFogColor = RenderSettings.fogColor;
+	//	Debug.Log(defaultFogColor);
 	}
 	
 	// Update is called once per frame
@@ -35,6 +40,8 @@ public class Bridge : MonoBehaviour {
 		for(int i = 0 ; i < this.transform.childCount ; i++){
 			this.transform.GetChild(i).gameObject.SetActive(displayItems && !pickedUp);
 		}
+		
+		RenderSettings.fogColor = this.displayItems ? darkenFogColor : defaultFogColor;
 		
 		mesh.material = displayItems && !pickedUp ? materials[1] : materials[0];
 	}

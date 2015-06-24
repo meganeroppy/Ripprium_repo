@@ -26,7 +26,7 @@ public class Ripple_particle : MonoBehaviour {
 	}
 
 	public void Create(bool withDestroy=false){
-		Debug.Log("Create");
+//		Debug.Log("Create");
 		parSys.Play();
 		if(withDestroy){
 			Destroy(this.gameObject, 1.0f);
