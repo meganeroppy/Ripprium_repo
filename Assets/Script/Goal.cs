@@ -3,7 +3,8 @@ using System.Collections;
 
 public class Goal : MonoBehaviour {
 
-	private ArrayList checkPoints = new ArrayList();
+	public ArrayList checkPoints = new ArrayList();
+	public static bool[] check = new bool[5];
 	public static bool clearFlug = false;
 	public static bool completed = false;
 	[SerializeField]
@@ -24,10 +25,13 @@ public class Goal : MonoBehaviour {
 		
 		for(int i = 0 ; i < checkPoints.Count ; i++){
 			CheckPoint obj = (checkPoints[i] as GameObject).GetComponent<CheckPoint>();
-			if(!obj.isChecked){
+			check[i] = obj.isChecked;
+			if(!check[i]){
 				return;
 			}	
 		}
+		
+		check[4] = true;
 
 		if(!clearFlug){
 			Debug.Log("ClearFlug");
@@ -69,5 +73,6 @@ public class Goal : MonoBehaviour {
 			}
 		}
 	}
+	
 	
 }

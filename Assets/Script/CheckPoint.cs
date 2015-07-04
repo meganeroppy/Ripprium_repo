@@ -5,6 +5,8 @@ using System.Collections.Generic;
 public class CheckPoint : MonoBehaviour {
 
 	public bool isChecked {get; set;}
+	[SerializeField]
+	private Vector3 offset = new Vector3(0,0,0);
 
 	[SerializeField]
 	private GameObject check;
@@ -32,13 +34,13 @@ public class CheckPoint : MonoBehaviour {
 				this.isChecked = true;
 				
 				// check
-				GameObject obj = Instantiate(check, marker.position + new Vector3(0,5,0), marker.rotation) as GameObject;
+				GameObject obj = Instantiate(check, marker.position + offset, marker.rotation) as GameObject;
 				//obj.transform.SetParent(marker);
 				Debug.Log(this.gameObject.name + " has been checked");
 				
 				// effect
 				obj = Instantiate(effect) as GameObject;
-				obj.transform.position = new Vector3 (target.position.x, 0, target.position.z);
+				obj.transform.position = target.position;
 				//objtransform.SetParent(target);
 				
 				PlaySE();

@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Check : MonoBehaviour {
+public class Check : TextSprite {
 
 	// Use this for initialization
-	void Start () {
+	protected override void Start () {
+		base.Start();
 		this.GetComponent<SpriteRenderer>().color = Color.green;
+		availableFromBack = true;
 	}
 	
 
