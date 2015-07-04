@@ -21,15 +21,15 @@ public class Goal : MonoBehaviour {
 	private void Update(){
 		if(checkPoints.Count <= 0){
 			return;
-		}
-		
+		}		
 		for(int i = 0 ; i < checkPoints.Count ; i++){
 			CheckPoint obj = (checkPoints[i] as GameObject).GetComponent<CheckPoint>();
 			check[i] = obj.isChecked;
-			if(!check[i]){
-				return;
-			}	
 		}
+		
+		if(!check[0] || !check[1] || !check[2] || !check[3]){
+			return;
+		}	
 		
 		check[4] = true;
 
