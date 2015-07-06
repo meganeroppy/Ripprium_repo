@@ -28,6 +28,10 @@ public class CheckPoint : MonoBehaviour {
 		this.isChecked = false;
 	}
 	
+	
+	void Start(){
+		this.transform.position = target.transform.position;
+	}
 	private void OnTriggerEnter(Collider col){
 		if(col.tag == "Player"){
 			if(!isChecked ){
