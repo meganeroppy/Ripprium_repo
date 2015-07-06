@@ -8,8 +8,8 @@ public class Player : MonoBehaviour {
 	
 	[SerializeField]
 	private GameObject ripplePrefab;
-	private Ripple_particle rippleR;
-	private Ripple_particle rippleL;
+	private Ripple rippleR;
+	private Ripple rippleL;
 	[SerializeField]
 	private RunningRipple runningRipple;
 
@@ -30,11 +30,11 @@ public class Player : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		rippleR = Instantiate(ripplePrefab).GetComponent<Ripple_particle>();
+		rippleR = Instantiate(ripplePrefab).GetComponent<Ripple>();
 		rippleR.transform.SetParent(this.transform);
 		rippleR.transform.localPosition = new Vector3( offset.x, 0.00f, offset.z);
 
-		rippleL = Instantiate(ripplePrefab).GetComponent<Ripple_particle>();
+		rippleL = Instantiate(ripplePrefab).GetComponent<Ripple>();
 		rippleL.transform.SetParent(this.transform);
 		rippleL.transform.localPosition = new Vector3( -offset.x, 0.00f, offset.z);
 

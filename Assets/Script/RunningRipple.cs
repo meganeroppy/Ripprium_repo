@@ -11,8 +11,8 @@ public class RunningRipple : MonoBehaviour {
 	
 	[SerializeField]
 	private GameObject ripplePrefab;
-	private Ripple_particle rippleR;
-	private Ripple_particle rippleL;
+	private Ripple rippleR;
+	private Ripple rippleL;
 	
 	private float effectTendency = 0.1f;
 	private float timer = 0;
@@ -33,11 +33,11 @@ public class RunningRipple : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		
-		rippleR = Instantiate(ripplePrefab).GetComponent<Ripple_particle>();
+		rippleR = Instantiate(ripplePrefab).GetComponent<Ripple>();
 		rippleR.transform.SetParent(this.transform);
 		rippleR.transform.localPosition = new Vector3( offset.x, 0.00f, offset.z);
 		
-		rippleL = Instantiate(ripplePrefab).GetComponent<Ripple_particle>();
+		rippleL = Instantiate(ripplePrefab).GetComponent<Ripple>();
 		rippleL.transform.SetParent(this.transform);
 		rippleL.transform.localPosition = new Vector3( -offset.x, 0.00f, offset.z);
 		
@@ -73,7 +73,7 @@ public class RunningRipple : MonoBehaviour {
 	}
 	
 	private void CreateRipple(bool right){
-		Ripple_particle	ripple = Instantiate(ripplePrefab).GetComponent<Ripple_particle>();
+		Ripple	ripple = Instantiate(ripplePrefab).GetComponent<Ripple>();
 		ripple.transform.SetParent(this.transform);
 		ripple.transform.localPosition = new Vector3( offset.x * (right ? 1 : -1), 0.00f, offset.z);
 		ripple.Create(true);
