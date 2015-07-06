@@ -46,7 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Prefab\IndicatorB.cs" />
      <Compile Include="Assets\Rocks and Boulders 2\Shaders\Desaturate\DesaturateEffect.cs" />
      <Compile Include="Assets\Rocks and Boulders 2\Shaders\RotateGameObject.cs" />
      <Compile Include="Assets\Script\BillboardingText.cs" />
