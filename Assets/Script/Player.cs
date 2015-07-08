@@ -22,7 +22,15 @@ public class Player : MonoBehaviour {
 	private Vector3 offset = new Vector3(1.5f, 0.0f, 0.0f);
 	private bool effectOnRight = true;
 
+	private Transform myCamera;
+	private Transform cameraObject;
+
 	void Awake(){
+		myCamera = this.transform.GetChild (0);
+		myCamera.localRotation = Quaternion.identity;
+		cameraObject = GameObject.Find("CameraObject").transform;
+		myCamera.SetParent (cameraObject);
+		myCamera.transform.localPosition = new Vector3 (0, 1.2f, 0);
 		controller = GetComponent<CharacterController>();
 		//inputController = GetComponent<FPSInputController>();
 	}
@@ -42,6 +50,16 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (UnityEditor.PlayerSettings.virtualRealitySupported) {
+		//	myCamera.localRotation = Quaternion.identity;
+
+			Vector3 playerCamRot = myCamera.rotation.eulerAngles;
+			Vector3 newRot = new Vector3(this.transform.rotation.x, playerCamRot.y, this.transform.rotation.z);
+			this.transform.rotation = Quaternion.Euler( newRot );
+			Debug.Log (this.transform.rotation.eulerAngles + " / " + myCamera.rotation.eulerAngles);
+			//Debug.Log (this.transform.localRotation.eulerAngles + " / " + myCamera.localRotation.eulerAngles);
+		}
+
 
 		if(Goal.completed){
 			if(controller.enabled == true){
@@ -96,3 +114,5 @@ public class Player : MonoBehaviour {
 		Instantiate( runningRipple , new Vector3(pos.x, 0, pos.z), this.transform.rotation);
 	}
 }
+
+
