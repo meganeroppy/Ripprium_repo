@@ -12,6 +12,10 @@ public class TextSprite : MonoBehaviour {
 		myRenderer = GetComponent<SpriteRenderer>();
 		player = GameObject.Find("Player");
 		UpdateAlpha(0);
+		
+		if(this.gameObject.name.Contains("sign")){
+			disappearDist = 60;
+		}
 	}
 	
 	
@@ -22,7 +26,7 @@ public class TextSprite : MonoBehaviour {
 		Vector3 diff = new Vector3(this.transform.position.x - player.transform.position.x, 0, this.transform.position.z - player.transform.position.z);
 		float dot = Vector3.Dot(transform.forward, diff);
 		
-		if(dot < 0 && ( this.gameObject.name != "Text5" && !this.gameObject.name.Contains("Marker")) && !availableFromBack){
+		if(dot < 0 && ( this.gameObject.name != "Text5" && !this.gameObject.name.Contains("Marker") && !this.gameObject.name.Contains("sign"))  && !availableFromBack){
 			UpdateAlpha(0);
 			return;
 		}

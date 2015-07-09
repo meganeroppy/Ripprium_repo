@@ -13,12 +13,19 @@ public class Goal : MonoBehaviour {
 	[SerializeField]
 	private AudioClip se_clearFlug;
 	
+	[SerializeField]
+	private bool clearFlugForDebug = false;
+	
 	
 	private void Start(){
 		checkPoints = GetCheckPoints();
 	}
 	
 	private void Update(){
+		if(clearFlugForDebug){
+			clearFlug = true;
+		}
+	
 		if(checkPoints.Count <= 0){
 			return;
 		}		

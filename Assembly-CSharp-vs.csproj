@@ -56,6 +56,7 @@
      <Compile Include="Assets\Script\Check.cs" />
      <Compile Include="Assets\Script\CheckPoint.cs" />
      <Compile Include="Assets\Script\DarkScreen.cs" />
+     <Compile Include="Assets\Script\DarkScreenSprite.cs" />
      <Compile Include="Assets\Script\Earth.cs" />
      <Compile Include="Assets\Script\Goal.cs" />
      <Compile Include="Assets\Script\Indicator.cs" />
