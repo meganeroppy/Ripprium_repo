@@ -30,8 +30,6 @@ public class MouseLook : MonoBehaviour {
 
 	float rotationY = 0F;
 
-
-
 	void Update ()
 	{
 		if (axes == RotationAxes.MouseXAndY)
@@ -62,8 +60,5 @@ public class MouseLook : MonoBehaviour {
 		if (GetComponent<Rigidbody>())
 			GetComponent<Rigidbody>().freezeRotation = true;
 		Cursor.visible = false;
-
-		sensitivityX = UnityEditor.PlayerSettings.virtualRealitySupported ? 0 : sensitivityX;
-
 	}
 }
