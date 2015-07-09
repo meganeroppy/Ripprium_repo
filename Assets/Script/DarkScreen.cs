@@ -5,7 +5,7 @@ using System.Collections;
 public class DarkScreen : MonoBehaviour {
 
 	private Image image;
-	private Text logo;
+	private Image logo;
 
 	[SerializeField]
 	private float fadeSpeed = 0.15f;
@@ -16,7 +16,7 @@ public class DarkScreen : MonoBehaviour {
 
 	private void Awake(){
 		image = GetComponent<Image>();
-		logo = this.transform.parent.GetChild(1).GetComponent<Text>();
+		logo = this.transform.parent.GetChild(1).GetComponent<Image>();
 		UpdateDarkAlpha(m_darkAlpha);
 		UpdateLogoAlpha(m_logoAlpha);
 	}

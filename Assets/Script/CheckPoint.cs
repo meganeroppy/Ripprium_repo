@@ -6,7 +6,7 @@ public class CheckPoint : MonoBehaviour {
 
 	public bool isChecked {get; set;}
 	[SerializeField]
-	private Vector3 offset = new Vector3(0,0,0);
+	private Vector3 offset = new Vector3(0,0,-0.5f);
 
 	[SerializeField]
 	private GameObject check;

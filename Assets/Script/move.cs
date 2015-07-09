@@ -9,7 +9,7 @@ public class move : MonoBehaviour {
 	// Use this for initialization
 	IEnumerator Start ()
 	{
-		Debug.Log(this.gameObject.name + "::Start()");
+//		Debug.Log(this.gameObject.name + "::Start()");
 		_pointA = transform.position.x;
 		while (true)
 		{
