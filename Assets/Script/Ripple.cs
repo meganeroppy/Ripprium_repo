@@ -4,43 +4,32 @@ using System.Collections;
 public class Ripple : MonoBehaviour {
 
 	[SerializeField]
-	private float duration = 2.5f;
-	private Vector3 myScale;
-	private float timer = 0;
-	[SerializeField]
-	private float maxScale = 25;
-	private Color[] colors =  new Color[8]{Color.red, Color.blue, Color.magenta, Color.white, Color.magenta, Color.yellow, Color.green, Color.cyan};
-	private SpriteRenderer spriteRenderer;
-	[SerializeField]
-	private float gainRate = 1.01f;
+	private int textureIndex = 0;
 
 
-	void Awake(){
-		myScale = this.transform.localScale;
-	}
+	[SerializeField]
+	private Texture[] myTextures;
+
+	private ParticleSystemRenderer par;
+	private ParticleSystem parSys;
+
 	// Use this for initialization
-	void Start () {
-		float val = Random.Range(0, 90);
-		this.transform.Rotate(0,val, 0);
-		Color newColor = colors[Random.Range(0, colors.Length)];
-		spriteRenderer = this.transform.GetChild(0).GetComponent<SpriteRenderer>();
-		spriteRenderer.color = newColor;
+	void Awake () {
+		par = GetComponent<ParticleSystemRenderer>();
+		parSys = GetComponent<ParticleSystem>();
+		parSys.playOnAwake = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
-	
-	
-		if(myScale.x > maxScale || timer > duration){
-			Destroy(this.gameObject);
-		}else{
-			
-		
-			timer += Time.deltaTime;
-			myScale *= gainRate;
-			this.transform.localScale = myScale;
-			
+		par.material.mainTexture = myTextures[textureIndex % myTextures.Length];
+	}
+
+	public void Create(bool withDestroy=false){
+//		Debug.Log("Create");
+		parSys.Play();
+		if(withDestroy){
+			Destroy(this.gameObject, 1.0f);
 		}
 	}
 }
