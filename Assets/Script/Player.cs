@@ -26,11 +26,13 @@ public class Player : MonoBehaviour {
 	private Transform cameraObject;
 
 	void Awake(){
-		myCamera = this.transform.GetChild (0);
-		myCamera.localRotation = Quaternion.identity;
-		cameraObject = GameObject.Find("CameraObject").transform;
-		myCamera.SetParent (cameraObject);
-		myCamera.transform.localPosition = new Vector3 (0, 1.2f, 0);
+		if (UnityEditor.PlayerSettings.virtualRealitySupported) {
+			myCamera = this.transform.GetChild (0);
+			myCamera.localRotation = Quaternion.identity;
+			cameraObject = GameObject.Find("CameraObject").transform;
+			myCamera.SetParent (cameraObject);
+			myCamera.transform.localPosition = new Vector3 (0, 1.2f, 0);
+		}
 		controller = GetComponent<CharacterController>();
 		//inputController = GetComponent<FPSInputController>();
 	}
@@ -56,7 +58,7 @@ public class Player : MonoBehaviour {
 			Vector3 playerCamRot = myCamera.rotation.eulerAngles;
 			Vector3 newRot = new Vector3(this.transform.rotation.x, playerCamRot.y, this.transform.rotation.z);
 			this.transform.rotation = Quaternion.Euler( newRot );
-			Debug.Log (this.transform.rotation.eulerAngles + " / " + myCamera.rotation.eulerAngles);
+//			Debug.Log (this.transform.rotation.eulerAngles + " / " + myCamera.rotation.eulerAngles);
 			//Debug.Log (this.transform.localRotation.eulerAngles + " / " + myCamera.localRotation.eulerAngles);
 		}
 

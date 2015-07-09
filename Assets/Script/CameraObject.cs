@@ -7,6 +7,10 @@ public class CameraObject : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		if (!UnityEditor.PlayerSettings.virtualRealitySupported) {
+			Destroy(this.gameObject);
+			return;
+		}
 		player = GameObject.Find ("Player").transform;
 	}
 	
