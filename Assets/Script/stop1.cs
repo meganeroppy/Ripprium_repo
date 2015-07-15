@@ -6,6 +6,7 @@ public class stop1 : MonoBehaviour {
 	public GameObject a;
 	// Use this for initialization
 	void Start () {
+	
 	}
 	
 	// Update is called once per frame
