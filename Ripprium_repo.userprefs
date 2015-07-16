@@ -1,11 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BlockingIdol.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Player.cs">
     <Files>
-      <File FileName="Assets/Script/CheckPoint.cs" Line="33" Column="1" />
-      <File FileName="Assets/Script/earthup.cs" Line="16" Column="1" />
-      <File FileName="Assets/Scripts/Trap.cs" Line="16" Column="29" />
-      <File FileName="Assets/Scripts/BlockingIdol.cs" Line="38" Column="43" />
+      <File FileName="Assets/Scripts/Trap.cs" Line="8" Column="14" />
+      <File FileName="Assets/Scripts/BlockingIdol.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Unlock.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Door.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/DarkScreenSprite.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Ripple.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Player.cs" Line="80" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

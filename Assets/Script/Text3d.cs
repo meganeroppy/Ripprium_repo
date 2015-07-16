@@ -11,32 +11,27 @@ public class Text3d : MonoBehaviour {
 		textMesh = GetComponent<TextMesh>();
 		player = GameObject.Find("Player");
 		UpdateAlpha(0);
+		if(this.gameObject.name.Contains("signpost")){
+			disappearDist = 60f;
+		}
 	}
-
 
 	
 	// Update is called once per frame
 	void Update () {
 	
-		
-	
-	
 		Vector3 diff = new Vector3(this.transform.position.x - player.transform.position.x, 0, this.transform.position.z - player.transform.position.z);
 		float dot = Vector3.Dot(transform.forward, diff);
-		
 		
 		if(dot < 0 && ( this.gameObject.name != "Text5" || !this.gameObject.name.Contains("Marker"))){
 			UpdateAlpha(0);
 			return;
-		}                       
-
+		}
 		float distance = diff.magnitude;
-		
 		if(gameObject.name.Equals("Text1")){
 			
 			
 		}
-
 		//if(distance >= 20){
 			float val = (disappearDist - distance) / 10;
 			//Debug.Log(val);

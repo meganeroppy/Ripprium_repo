@@ -19,6 +19,12 @@ public class DarkScreenSprite : MonoBehaviour {
 		logo = this.transform.GetChild(0).GetComponent<SpriteRenderer>();
 		UpdateDarkAlpha(m_darkAlpha);
 		UpdateLogoAlpha(m_logoAlpha);
+		
+		if(UnityEditor.PlayerSettings.virtualRealitySupported){
+			Debug.Log("DarkScreen Adjusted for Oculus");
+			this.transform.localScale = new Vector3(4,4,4);
+			this.transform.GetChild(0).transform.localScale = new Vector3(0.005f, 0.005f, 0.002f);
+		}
 	}
 	
 	private void Update(){
