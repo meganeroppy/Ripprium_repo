@@ -72,6 +72,11 @@
      <Compile Include="Assets\Script\earthup.cs" />
      <Compile Include="Assets\Script\move.cs" />
      <Compile Include="Assets\Script\stop1.cs" />
+     <Compile Include="Assets\Scripts\BlockingIdol.cs" />
+     <Compile Include="Assets\Scripts\Door.cs" />
+     <Compile Include="Assets\Scripts\MoveByMouse.cs" />
+     <Compile Include="Assets\Scripts\Trap.cs" />
+     <Compile Include="Assets\Scripts\Unlock.cs" />
      <Compile Include="Assets\Store\Candle\Scripts\AutoRotateX.cs" />
      <Compile Include="Assets\Store\Candle\Scripts\AutoRotateY.cs" />
      <Compile Include="Assets\Store\Candle\Scripts\CandleLight.cs" />

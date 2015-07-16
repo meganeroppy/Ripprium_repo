@@ -1,27 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/UnityChan.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BlockingIdol.cs">
     <Files>
-      <File FileName="Assets/Script/DarkScreen.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/Indicator.cs" Line="47" Column="1" />
-      <File FileName="Assets/Script/move.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/CheckPoint.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/Goal.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/TextSprite.cs" Line="1" Column="1" />
-      <File FileName="Assets/UnityChan.cs" Line="29" Column="4" />
+      <File FileName="Assets/Script/CheckPoint.cs" Line="33" Column="1" />
+      <File FileName="Assets/Script/earthup.cs" Line="16" Column="1" />
+      <File FileName="Assets/Scripts/Trap.cs" Line="16" Column="29" />
+      <File FileName="Assets/Scripts/BlockingIdol.cs" Line="38" Column="43" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True" selected="True" />
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/MeganeRoppy/Ripprium_repo/Assets/MysteryZone.cs" line="39" />
-      <Breakpoint file="/Users/MeganeRoppy/Ripprium_repo/Assets/Indicator.cs" line="45" />
-      <Breakpoint file="/Users/MeganeRoppy/Ripprium_repo/Assets/Script/Goal.cs" line="33" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
