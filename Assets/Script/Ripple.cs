@@ -12,12 +12,17 @@ public class Ripple : MonoBehaviour {
 
 	private ParticleSystemRenderer par;
 	private ParticleSystem parSys;
+	
+	private AudioSource audio;
+	[SerializeField]
+	private AudioClip clip;
 
 	// Use this for initialization
 	void Awake () {
 		par = GetComponent<ParticleSystemRenderer>();
 		parSys = GetComponent<ParticleSystem>();
 		parSys.playOnAwake = false;
+		audio = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -26,8 +31,9 @@ public class Ripple : MonoBehaviour {
 	}
 
 	public void Create(bool withDestroy=false){
-//		Debug.Log("Create");
+		Debug.Log("Create");
 		parSys.Play();
+		audio.PlayOneShot(clip);
 		if(withDestroy){
 			Destroy(this.gameObject, 1.0f);
 		}

@@ -15,11 +15,15 @@ public class Door : MonoBehaviour {
 	private bool clockwise = true;
 
 	private bool opening = false;
+	
+	private AudioSource audio;
 
 	// Use this for initialization
 	void Start () {
 		defaultRotY = this.transform.rotation.eulerAngles.y;
 		targetRot = defaultRotY + rotOffsetY;
+		
+		audio = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -39,5 +43,6 @@ public class Door : MonoBehaviour {
 
 	public void Open(){
 		opening = true;
+		audio.Play();
 	}
 }

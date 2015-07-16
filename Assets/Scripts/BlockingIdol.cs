@@ -13,7 +13,8 @@ public class BlockingIdol : MonoBehaviour {
 	private float moveSpeed = 2.5f;
 
 	private bool blockFlug = false;
-
+	private AudioSource audio;
+	
 	// Use this for initialization
 	void Start () {
 		defaultPosY = this.transform.localPosition.y;
@@ -22,7 +23,8 @@ public class BlockingIdol : MonoBehaviour {
 			moveSpeed *= -1;
 		}
 		moveTargetPosY = defaultPosY + moveOffsetPosY;
-
+		audio = GetComponent<AudioSource>();
+		
 	}
 	
 	// Update is called once per frame
@@ -32,9 +34,9 @@ public class BlockingIdol : MonoBehaviour {
 			float distance = Mathf.Abs( moveTargetPosY - curPosY );
 			if( distance  <  0.1f ){
 				blockFlug = false;
+				audio.Stop();
 			}else{
 				Vector3 newPos = this.transform.localPosition + new Vector3(0, moveSpeed * Time.deltaTime, 0);
-			
 				this.transform.localPosition = newPos;
 			}
 		}
@@ -44,6 +46,7 @@ public class BlockingIdol : MonoBehaviour {
 
 	public void Blocking(){
 		blockFlug = true;
-
+		audio.Play();
+		
 	}
 }

@@ -5,6 +5,7 @@ public class Trap : MonoBehaviour {
 
 	[SerializeField]
 	private GameObject[] moveTargets;
+	private bool done = false;
 
 	private void OnTriggerEnter(Collider col){
 		if(col.tag == "Player"){
@@ -13,6 +14,11 @@ public class Trap : MonoBehaviour {
 	}
 
 	private void ExecuteTrap(){
+	if(done){
+	return;
+	}
+	done = true;
+	
 		Debug.Log("ExecuteTrap!");
 		int num = moveTargets.Length;
 		for(int i = 0 ; i < num ; i++){
