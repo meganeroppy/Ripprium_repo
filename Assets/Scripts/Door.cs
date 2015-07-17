@@ -31,8 +31,8 @@ public class Door : MonoBehaviour {
 		if(opening){
 			float curRotY = this.transform.rotation.eulerAngles.y;
 			float diff = Mathf.Abs( targetRot - curRotY );
-		Debug.Log(diff);
-			if( diff  <  1.0f ){
+		//Debug.Log(diff);
+			if( diff  <  0.5f ){
 					opening = false;
 			}else{
 				float add = rotSpeed * Time.deltaTime * (clockwise ? 1 : -1);
@@ -42,6 +42,10 @@ public class Door : MonoBehaviour {
 	}
 
 	public void Open(){
+	if(opening){
+			//already started opening
+			return;
+	}
 		opening = true;
 		audio.Play();
 	}

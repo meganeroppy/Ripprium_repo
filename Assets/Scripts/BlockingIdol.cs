@@ -32,7 +32,8 @@ public class BlockingIdol : MonoBehaviour {
 		if(blockFlug){
 			float curPosY = this.transform.localPosition.y;
 			float distance = Mathf.Abs( moveTargetPosY - curPosY );
-			if( distance  <  0.1f ){
+			Debug.Log(distance);
+			if( distance  <  0.5f ){
 				blockFlug = false;
 				audio.Stop();
 			}else{
@@ -45,6 +46,11 @@ public class BlockingIdol : MonoBehaviour {
 
 
 	public void Blocking(){
+		if(blockFlug){
+			// already started blocking
+			return;
+		}
+	
 		blockFlug = true;
 		audio.Play();
 		
