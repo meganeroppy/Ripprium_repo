@@ -12,7 +12,10 @@ public class TextSprite : MonoBehaviour {
 		myRenderer = GetComponent<SpriteRenderer>();
 		player = GameObject.Find("Player");
 		UpdateAlpha(0);
-	}
+		
+		if(this.gameObject.name.Contains("signpost")){
+			disappearDist = 60f;
+		}	}
 	
 	
 	

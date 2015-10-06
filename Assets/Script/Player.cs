@@ -17,7 +17,7 @@ public class Player : MonoBehaviour {
 	private float timer = 0;
 
 	private CharacterController controller;
-	//private FPSInputController inputController;
+	private FPSInputController inputController;
 
 	private Vector3 offset = new Vector3(1.5f, 0.0f, 0.0f);
 	private bool effectOnRight = true;
@@ -34,7 +34,7 @@ public class Player : MonoBehaviour {
 			myCamera.transform.localPosition = new Vector3 (0, 1.2f, 0);
 		}
 		controller = GetComponent<CharacterController>();
-		//inputController = GetComponent<FPSInputController>();
+		inputController = GetComponent<FPSInputController>();
 	}
 
 	// Use this for initialization
@@ -62,7 +62,6 @@ public class Player : MonoBehaviour {
 			//Debug.Log (this.transform.localRotation.eulerAngles + " / " + myCamera.localRotation.eulerAngles);
 		}
 
-
 		if(Goal.completed){
 			if(controller.enabled == true){
 				controller.enabled = false;
@@ -73,11 +72,11 @@ public class Player : MonoBehaviour {
 			}
 		}
 		
-	/*
-		if(inputController.isStop){
+	
+		if(inputController){
 			return;
 		}
-*/
+
 
 		rippleR.gameObject.SetActive(controller.isGrounded);
 		rippleL.gameObject.SetActive(controller.isGrounded);
